@@ -19,10 +19,10 @@ double DurationBubble(vector<T>& v){
 
 template<typename T>
 double DurationMerge(vector<T>& v){
-    std::chrono::steady_clock::time_point t_begin = std::chrono::steady_clock::now(); //prendo il tempo ora
+    std::chrono::steady_clock::time_point t_begin = std::chrono::steady_clock::now();
     SortLibrary::MergeSort(v);
     std::chrono::steady_clock::time_point t_end = std::chrono::steady_clock::now();
-    double duration=std::chrono::duration_cast<std::chrono::nanoseconds>(t_end-t_begin).count();// converto nell'unità di misura che mi interessa e vedo la differenza di tempo
+    double duration=std::chrono::duration_cast<std::chrono::nanoseconds>(t_end-t_begin).count();
     return duration;
 }
 
@@ -232,7 +232,7 @@ int main(int argc, char **argv) //argv è il vettore degli argomenti di lunghezz
     cout<<"Merge tende a rimanere stabile a prescindere dal vettore."<<endl;
     cout<<"Bubble impiega molto poco tempo se il vettore e' gia' ordinato,"<<endl;
     cout<<"Mentre impiega molto soprattutto se non e' ordinata la parte finale del vettore."<<endl;
-    cout<<"In generale i risultati valgono sia con release che debug ma con release l'ordinamento è molto piu' veloce."<<endl;
+    cout<<"In generale i risultati valgono sia con release che debug ma con release l'ordinamento e' molto piu' veloce."<<endl;
 
     return 0;
 }
